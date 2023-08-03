@@ -18,8 +18,7 @@ const menu = [
         price: 4.50,
         color : "lightpink",
     },
-git init];
-
+];
 
 
 
