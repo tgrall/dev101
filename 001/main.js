@@ -15,7 +15,7 @@ const menu = [
     {
         id: 3,
         title: "Crepe au Nutella",
-        price: 4.50,
+        price: 5.50,
         color : "lightpink",
     },
 ];
@@ -27,6 +27,20 @@ const menu = [
  */
 function load() {
 
+    // get container element
+    const container = document.getElementById("container");
+
+    // loop through the menu and print each item
+    // here I am using for (i...), you can also use forEach
+    for (let i = 0; i < menu.length; i++) {
+        const item = menu[i];
+        container.innerHTML += `
+            <div class="item" style="background-color:${item.color}">
+                <h1>${item.title}</h1>
+                <h2>${item.price}€</h2>
+            </div>
+        `;
+    }
 
 }
 
